@@ -13,7 +13,7 @@ const linkStyles = {
 
 function NavBar() {
   return (
-    <div>
+    <div className="navbar">
       <NavLink
         to="/"
         exact
@@ -25,7 +25,7 @@ function NavBar() {
         Home
       </NavLink>
       <NavLink
-        to="/"
+        to="/movies"
         exact
         style={linkStyles}
         activeStyle={{
@@ -35,7 +35,7 @@ function NavBar() {
         Movies
       </NavLink>
       <NavLink
-        to="/"
+        to="/actors"
         exact
         style={linkStyles}
         activeStyle={{
@@ -45,7 +45,7 @@ function NavBar() {
         Actors
       </NavLink>
       <NavLink
-        to="/"
+        to="/directors"
         exact
         style={linkStyles}
         activeStyle={{

@@ -2,23 +2,23 @@ import React from "react";
 import { movies } from "../data";
 
 function Movies() {
-  const moviesDisplay = movies.map((movie) => {
+  const moviesDisplay = movies.map((movie, index) => {
    return (
-      <div>
-        <p>{movie.title}</p>
-        <p>{movie.time}</p>
+      <div key={index}>
+        <h2>{movie.title}</h2>
+        <h3>{movie.time}</h3>
         <ul>
-          {movie.genres.map(movie.genre => <li>{movie.genre}</li>)}
+          {movie.genres.map((genre, index) => <li key={index}>{genre}</li>)}
         </ul>
       </div>  
    )
   })
 
   return (
-    <div>
+    <main>
       <h1>Movies Page</h1>
       {moviesDisplay}
-    </div>
+    </main>
   );  
 }
 
